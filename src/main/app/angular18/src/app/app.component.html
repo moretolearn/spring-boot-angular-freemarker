@@ -1,0 +1,34 @@
+Welcome to {{title}} 
+<ul>
+  @for (item of listss; track item) {
+  <li>{{ item }}</li>
+  }
+  @empty {
+    No items found
+    }
+</ul>
+
+<router-outlet />
+
+<!-- Custom two way data binding -->
+
+
+<div>{{title}}</div>
+<div>{{wind?.spaAppProperties?.landPage}}</div>
+
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+    @for (item of employeesList; track $index) {
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.age }}</td>
+      <td>{{ item.salary }}</td>
+    </tr>
+    }
+  </table>
+</div>
